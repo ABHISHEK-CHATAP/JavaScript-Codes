@@ -19,5 +19,33 @@ function findElement(arr) {
 const array = [4, 3, 2, 5, 4, 5, 3, 4];
 console.log(findElement(array)); // Output: 2
 
+----------------------------------- xx ----------------------------------------
+
+Q . 2 // find a unique number of Array, whose elements are repeatating .
+
+const array = [2,3,3,4,6,7,4,8,9,5,7,6];
+// o/p - [3,4,6,7]
+
+function findRepeatedElements(arr){
+  const repeatedElements = [];
+  
+    for(let i=0; i<arr.length; i++){
+        let count = 0;
+        for(let j=0; j<arr.length; j++){
+            if(arr[i] == arr[j]){
+               count ++;
+            }
+        }
+        
+        if(count > 1 && !repeatedElements.includes(arr[i])){
+            repeatedElements.push(arr[i]);
+        }
+    }
+    return repeatedElements;
+}
+
+console.log(findRepeatedElements(array));
 
 ----------------------------------- xx ----------------------------------------
+
+
