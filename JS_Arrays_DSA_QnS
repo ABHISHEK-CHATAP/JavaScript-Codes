@@ -21,7 +21,7 @@ console.log(findElement(array)); // Output: 2
 
 ----------------------------------- xx ----------------------------------------
 
-Q . 2 // find a unique number of Array, whose elements are repeatating .
+Q . 2 // find a unique/ duplicate number of Array, whose elements are repeatating .
 
 const array = [2,3,3,4,6,7,4,8,9,5,7,6];
 // o/p - [3,4,6,7]
