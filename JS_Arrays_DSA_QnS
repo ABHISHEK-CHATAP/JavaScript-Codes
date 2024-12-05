@@ -66,8 +66,45 @@ console.log(findUnion(array1, array2)); // Output: [1, 2, 3]
 
 ----------------------------------- xx ----------------------------------------
 
+Q . 4 // Merge 2 Sorted Array
+
+const array1 = [1,3,5];
+const array2 = [2,4,6];
+
+function MergerSortedArray(arr1, arr2){
+    const SortedArray = [];
+    const mergeArray = [...arr1, ...arr2];
+    
+    for(let i=0; i<mergeArray.length; i++){
+        for(let j=0; j<(mergeArray.length-i-1); j++){
+            if(mergeArray[j] < mergeArray[j+1]){
+                let temp = mergeArray[j];
+                mergeArray[j] = mergeArray[j+1];
+                mergeArray[j+1] = temp;
+            }
+        }
+    }
+    return mergeArray;
+}
+
+console.log(MergerSortedArray(array1,array2))
+
+----------------------------------- xx ----------------------------------------
 
 
+----------------------------------- xx ----------------------------------------
+
+
+
+----------------------------------- xx ----------------------------------------
+
+
+
+----------------------------------- xx ----------------------------------------
+
+
+
+----------------------------------- xx ----------------------------------------
 
 
 
