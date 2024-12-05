@@ -48,4 +48,27 @@ console.log(findRepeatedElements(array));
 
 ----------------------------------- xx ----------------------------------------
 
+@ . 3 // Find Union of 2 Arrays
+
+function findUnion(arr1, arr2) {
+    const result = [...arr1]; // Start with all elements from arr1
+    for (let num of arr2) {
+        if (!result.includes(num)) { // Add only if it's not already in the result
+            result.push(num);
+        }
+    }
+    return [...new Set(result)];
+}
+
+const array1 = [1, 2, 2, 1];
+const array2 = [2, 3];
+console.log(findUnion(array1, array2)); // Output: [1, 2, 3]
+
+----------------------------------- xx ----------------------------------------
+
+
+
+
+
+
 
