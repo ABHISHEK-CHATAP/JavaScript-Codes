@@ -2,13 +2,11 @@
 // Ans : 
 const arr = ['a','b','c'];
 
-
 let obj = arr.reduce((accumulator, iterator)=>{
     return({...accumulator,[iterator]:iterator})
 },{});
 // console.log("converting to object with reduce ", obj);
 // converting to object with reduce  { a: 'a', b: 'b', c: 'c' } in {key:value} pair...
-
 
 
 
@@ -19,7 +17,6 @@ const convertobj =  array.reduce((acc,it)=>{
 // console.log(convertobj);  //{ a: 'a', b: 'b', c: 'c' }
 
 
-
 const sum = [1,2,3,4,5];
 const total = sum.reduce((a,i)=>{
     return a+=i
@@ -28,7 +25,6 @@ const total = sum.reduce((a,i)=>{
 
 // -------------------------------------------------------------------------------------------------------------------
 
-
 const arr1 = [3,3,4,5,6,6,7,8,9,10,10];
 const isEven = arr1.filter((a)=>{
     return a%2 !== 0
@@ -36,15 +32,9 @@ const isEven = arr1.filter((a)=>{
 // console.log("ODD noS" , (isEven));   //ODD noS [ 1, 3, 5, 7, 9 ]
 
 
-
-
-
 const removeDuplicates = [...new Set(arr1)];
 
-
-
 // -------------------------------------------------------------------------------------------------------------------
-
 
 const BubbleSort = (arr)=>{
  for(let i=0; i<arr.length;i++){
@@ -61,6 +51,22 @@ return arr;
 const arr2 =[2,1,10,3,30,4,90,9,80];
 // console.log(BubbleSort(arr2));    //[ 1,  2,  3,  4, 9,10, 30, 80, 90]
 
+       ----------- alternative code of Bubble Sort ------------
+
+function Sort(arr){
+    for(let i=0; i<arr.length; i++){
+        for(let j=i+1; j<arr.length; j++){
+            if(arr[i] > arr[j]){      // > or < sign se ascending and descending array sorted hoga
+                let temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    return arr
+}
+const array = [1,22,43,5,7,89];
+console.log(Sort(array))
    
 
 // -------------------------------------------------------------------------------------------------------------------
