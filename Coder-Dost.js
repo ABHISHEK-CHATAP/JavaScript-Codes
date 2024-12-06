@@ -67,7 +67,20 @@ function Sort(arr){
 }
 const array = [1,22,43,5,7,89];
 console.log(Sort(array))
-   
+
+ ----- Two Sum probles ------
+function TwoSum(arr, key){
+    for(let i=0; i<arr.length; i++){
+        for(let j=i+1; j< (arr.length);j++){
+            if(arr[i] + arr[j] == key){
+                return [i,j];
+            }
+        }
+    }
+}
+
+const array = [1,2,4,5,7,8];
+console.log(TwoSum(array, 3))   //output = [ 0, 1 ]
 
 // -------------------------------------------------------------------------------------------------------------------
 
