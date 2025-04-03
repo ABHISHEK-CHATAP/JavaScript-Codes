@@ -1,0 +1,84 @@
+Stack and Queue Data Structure in JavaScript
+
+1. Stack Data Structure Implementation 
+
+
+class myStack {
+    constructor(){
+        this.Stack = [];
+    }
+    
+    size(){
+       return this.Stack.length;
+    }
+    
+    isEmpty(){
+        return this.size() == 0;
+    }
+    
+    push(ele){
+        this.Stack.push(ele);
+    }
+    
+    pop(){
+        if(this.isEmpty()){
+            return "Stack is Empty, can't pop element";
+        }
+        return this.Stack.pop();
+    }
+    
+    peek(){
+        if(this.isEmpty()){
+            return "Stack is Empty, can't peek element";
+        }
+        return this.Stack[this.size()-1];
+    }
+    
+    printStack(){
+        for(let i = this.size() -1 ; i >=0 ; i--){
+            console.log(" ", this.Stack[i] , " ");
+        }
+    }
+    
+}
+
+const mystack = new myStack();
+mystack.push(2);
+mystack.push(17);
+mystack.push(10);
+mystack.push(32);
+// mystack.pop();
+// mystack.pop();
+// mystack.pop();
+// console.log(mystack.pop());
+// mystack.pop();
+// console.log(mystack.peek());
+mystack.printStack();
+
+
+---------------------------------------- XXXXXXXXXXXXXXXXX -------------------------------------
+---------------------------------------- XXXXXXXXXXXXXXXXX -------------------------------------
+
+1. Queue Data Structure Implementation 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
