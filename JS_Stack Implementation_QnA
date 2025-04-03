@@ -1,7 +1,6 @@
-Stack and Queue Data Structure in JavaScript
+Stack Data Structure in JavaScript
 
 1. Stack Data Structure Implementation 
-
 
 class myStack {
     constructor(){
@@ -59,7 +58,7 @@ mystack.printStack();
 ---------------------------------------- XXXXXXXXXXXXXXXXX -------------------------------------
 ---------------------------------------- XXXXXXXXXXXXXXXXX -------------------------------------
 
-1. Queue Data Structure Implementation 
+Q.1. 
 
 
 
