@@ -1,3 +1,67 @@
 Queue Data Structure , Questions and Answers in JavaScript
 
 Queue Data Structure Implementation 
+
+class Queue {
+    constructor(){
+        this.queue = [];
+    }
+    
+    size(){
+        return this.queue.length;
+    }
+    
+    isEmpty(){
+        return this.size() == 0;
+    }
+    
+    enQueue(ele){
+        this.queue.push(ele);
+    }
+    
+    deQueue(){
+        if(this.isEmpty()){
+            return "Queue is Empty, can't DeQueue elements .."
+        }
+        return this.queue.shift();
+    }
+    
+    front(){
+        if(this.isEmpty()){
+            return "Queue is Empty, can't View elements .."
+        }
+        return this.queue[0]
+    }
+    
+    printQueue(){
+         if(this.isEmpty()){
+            return "Queue is Empty, can't prints elements .."
+        }
+        console.log("<----  Queue Direction", "\n ");
+        let QueueString = "";
+        for(let i=0; i<this.size(); i++){
+            QueueString += this.queue[i] + " ";
+        }
+        return QueueString;
+       
+    }
+    
+}
+
+const myQueue = new Queue();
+myQueue.enQueue(2);
+myQueue.enQueue(12);
+myQueue.enQueue(22);
+myQueue.enQueue(5);
+myQueue.deQueue();
+myQueue.deQueue();
+console.log(myQueue.printQueue());
+console.log(myQueue.front());
+
+
+
+
+
+
+
+
