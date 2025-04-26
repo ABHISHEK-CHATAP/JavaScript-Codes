@@ -1,4 +1,47 @@
 
+Q.1 - Count the frequency of elements
+
+function countFrequency(arr) {
+  const frequencyCounter = {};
+
+  for (const element of arr) {
+    frequencyCounter[element] = (frequencyCounter[element] || 0) + 1;
+  }
+
+  return frequencyCounter;
+}
+
+// Example usage:
+const myArray = [1, 2, 2, 3, 1, 4, 1];
+const frequencies = countFrequency(myArray);
+console.log(frequencies); // Output: { '1': 3, '2': 2, '3': 1, '4': 1 }
+
+----------------------------------- xx ----------------------------------------
+
+Q.2 - find first non-repeatating character
+
+function firstNonRepeatingChar(str) {
+    let charCount = {};
+    
+    for (let char of str) {
+        charCount[char] = (charCount[char] || 0) + 1;
+    }
+    
+    for (let char of str) {
+        if (charCount[char] === 1) return char;
+    }
+    
+    return null; // No unique character found
+}
+
+// Example:
+console.log(firstNonRepeatingChar("swiss")); 
+// Output: "w"
+
+----------------------------------- xx ----------------------------------------
+
+Q.3 - write function to find the most frequent character in a string:
+
 function mostFrequentChar(str) {
   const charCount = {};
   let maxChar = '';
@@ -21,3 +64,13 @@ function mostFrequentChar(str) {
 // Example usage
 console.log(mostFrequentChar("hello"));     // l
 console.log(mostFrequentChar("javascript")) // a
+
+----------------------------------- xx ----------------------------------------
+
+
+
+----------------------------------- xx ----------------------------------------
+
+
+
+----------------------------------- xx ----------------------------------------
