@@ -67,6 +67,30 @@ console.log(mostFrequentChar("javascript")) // a
 
 ----------------------------------- xx ----------------------------------------
 
+Q.3 - write function to count vowels and consonants:
+
+function countVowelsAndConsonants(str) {
+  let vowels = 'aeiouAEIOU';
+  let vowelCount = 0;
+  let consonantCount = 0;
+
+  for (let char of str) {
+    if (/[a-zA-Z]/.test(char)) {  // Check if it's an alphabet letter also It ignores spaces, numbers, and symbols from String.
+      if (vowels.includes(char)) {
+        vowelCount++;
+      } else {
+        consonantCount++;
+      }
+    }
+  }
+
+  return { vowelCount, consonantCount };
+}
+
+// Example usage
+console.log(countVowelsAndConsonants("hello world")); 
+// Output: { vowelCount: 3, consonantCount: 7 }
+
 
 
 ----------------------------------- xx ----------------------------------------
