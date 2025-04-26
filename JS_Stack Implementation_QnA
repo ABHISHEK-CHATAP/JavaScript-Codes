@@ -58,11 +58,32 @@ mystack.printStack();
 ---------------------------------------- XXXXXXXXXXXXXXXXX -------------------------------------
 ---------------------------------------- XXXXXXXXXXXXXXXXX -------------------------------------
 
-Q.1. 
+Q.1. write a code for reverse String withiut using in-built methods :
 
+( Uing Stack DS )
 
+const reverseWords = (str)=>{
+    const splits = str.split(" ");
+    const stack = [];
+    for(let ch of splits){
+        stack.push(ch);
+    }
+    
+    let finalString = "";
+    while(stack.length){
+        const current = stack.pop();
+        if(current){
+            finalString += current + " ";
+        }
+    }
+    
+    return finalString.trim();
+}
 
+// const String = 
+console.log(reverseWords("Try programiz.pro"));
 
+---------------------------------------- XXXXXXXXXXXXXXXXX -------------------------------------
 
 
 
