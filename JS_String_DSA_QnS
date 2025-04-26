@@ -1,0 +1,23 @@
+
+function mostFrequentChar(str) {
+  const charCount = {};
+  let maxChar = '';
+  let maxCount = 0;
+
+  for (let char of str) {
+    // Count each character
+    charCount[char] = (charCount[char] || 0) + 1;
+
+    // Check if this character has the highest count
+    if (charCount[char] > maxCount) {
+      maxChar = char;
+      maxCount = charCount[char];
+    }
+  }
+
+  return maxChar;
+}
+
+// Example usage
+console.log(mostFrequentChar("hello"));     // l
+console.log(mostFrequentChar("javascript")) // a
